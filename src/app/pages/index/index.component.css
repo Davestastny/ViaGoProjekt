@@ -1,0 +1,10 @@
+.product_list {
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1200px;
+  margin-inline: auto;
+  gap: 1rem;
+}
+
+h1{
+  text-align: center;
+}

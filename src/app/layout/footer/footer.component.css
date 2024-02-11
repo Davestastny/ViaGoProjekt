@@ -1,0 +1,21 @@
+footer {
+  width: 100%;
+  min-height: 40vh;
+  background-color: #FFEE00;
+  place-items: center;
+}
+
+footer .footer_content {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer_content .footer_content-info {
+  justify-content: end;
+}
+
+.footer_content .footer_content-categories {
+  justify-content: center;
+}
