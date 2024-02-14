@@ -1,7 +1,5 @@
 .product_card {
-  background-color: rgb(246, 246, 246);
-  border-radius: 36px;
-}
+  }
 
 .product_card-content {
   max-width: 90%;
@@ -12,8 +10,9 @@
 
 .product_card-content img {
   width: 90%;
-  border-radius: 36px;
+  border-radius: 16px;
   margin-bottom: .5rem;
+  margin-top: 10px; /* Adjust this value to your preference */
 }
 
 .product_card-content p {
@@ -21,10 +20,16 @@
 }
 
 .product_card-content a {
-  background-color: #FFEE00;
+  background-color: black;
   padding: .5rem 1rem;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
+.product_card:hover {
+  background-color: #FFEE00;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
