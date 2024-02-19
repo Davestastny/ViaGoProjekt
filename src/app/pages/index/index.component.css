@@ -9,8 +9,21 @@ h1{
   text-align: center;
 }
 
+.landing-page {
+  position: relative;
+  text-align: center;
+}
 .landing-page img {
   width: 100%;
+}
+
+.landing-page h1{
+  font-size: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 .banner {
