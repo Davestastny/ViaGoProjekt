@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {ProductCardComponent} from "../../components/product-card/product-card.component";
 
 @Component({
   selector: 'app-models',
   standalone: true,
-  imports: [],
+    imports: [
+        ProductCardComponent
+    ],
   templateUrl: './models.component.html',
   styleUrl: './models.component.css'
 })

@@ -6,3 +6,10 @@ p {
   max-width: 60rem;
   margin: 0 auto;
 }
+
+.product_list {
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1200px;
+  margin-inline: auto;
+  gap: 1rem;
+}
