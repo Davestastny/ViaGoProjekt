@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {ProductCardComponent} from "../../components/product-card/product-card.component";
 
 @Component({
   selector: 'app-license',
   standalone: true,
-  imports: [],
+    imports: [
+        ProductCardComponent
+    ],
   templateUrl: './license.component.html',
   styleUrl: './license.component.css'
 })

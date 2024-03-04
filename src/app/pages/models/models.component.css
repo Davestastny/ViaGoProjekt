@@ -12,4 +12,6 @@ p {
   max-width: 1200px;
   margin-inline: auto;
   gap: 1rem;
+  margin-top: 2rem; /* Space above the grid */
+  margin-bottom: 2rem; /* Space below the grid */
 }

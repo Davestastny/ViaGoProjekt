@@ -1,5 +1,21 @@
 .product_card {
-  }
+  background-color: #fff; /* Set a white background for product cards */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add a subtle shadow to lift the card off the page */
+  border-radius: 5px; /* Round the corners of the cards */
+  overflow: hidden; /* Ensure the content fits within the rounded corners */
+  padding: 1rem; /* Add some padding inside the cards */
+  display: flex; /* Use flex layout for content inside cards */
+  flex-direction: column; /* Stack card content vertically */
+  justify-content: space-between; /* Space out content inside the card */
+  cursor: pointer; /* Change cursor to pointer to indicate clickable */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.product_card:hover {
+  background-color: #FFEE00; /* Change background color on hover */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Enhance shadow on hover */
+  transform: translateY(-5px); /* Slightly lift the card on hover */
+}
 
 .product_card-content {
   max-width: 90%;
@@ -10,13 +26,14 @@
 
 .product_card-content img {
   width: 90%;
-  border-radius: 16px;
+  border-radius: 16px; /* Rounded corners for the image */
   margin-bottom: .5rem;
   margin-top: 10px; /* Adjust this value to your preference */
 }
 
 .product_card-content p {
-  margin-block: .25rem;
+  margin-block: .25rem; /* Tighten the spacing around paragraphs */
+  text-align: center; /* Center-align the text */
 }
 
 .product_card-content a {
@@ -24,15 +41,7 @@
   padding: .5rem 1rem;
   text-decoration: none;
   color: white;
-}
-
-.product_card:hover {
-  background-color: #FFEE00;
-  border-radius: 16px;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.product_card p {
-  text-align: center;
+  display: inline-block; /* Ensure the link behaves like a block but fits content */
+  text-align: center; /* Center-align text inside the link/button */
+  border-radius: 5px; /* Rounded corners for the link/button */
 }

@@ -1,3 +1,32 @@
 h1 {
   text-align: center;
+  margin-bottom: 2rem;
 }
+
+p {
+  max-width: 60rem;
+  margin: 2rem auto;
+  text-align: justify;
+  font-size: 1.1rem; /* Slightly larger font size for readability */
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem; /* Add space below the image container */
+}
+
+.product_list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1200px;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+
+
+
+
+
+

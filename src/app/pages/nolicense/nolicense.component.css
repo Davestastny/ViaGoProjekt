@@ -1,10 +1,19 @@
 h1 {
   text-align: center;
+  margin-bottom: 1rem; /* Add space below the heading */
 }
 
 p {
   max-width: 60rem;
   margin: 0 auto;
+  margin-bottom: 2rem; /* Add space below the paragraph */
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem; /* Add space below the image container */
 }
 
 .product_list {
@@ -12,12 +21,8 @@ p {
   max-width: 1200px;
   margin-inline: auto;
   gap: 1rem;
+  margin: 2rem auto; /* Add margin to the top and bottom, auto for left and right for centering */
+
 }
 
-.photo {
-  display: flex;
-    justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  max-height: 100%;
-}
+
