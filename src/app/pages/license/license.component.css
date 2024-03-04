@@ -1,12 +1,13 @@
 h1 {
   text-align: center;
-  margin-bottom: 1rem; /* Add space below the heading */
+  margin-bottom: 2rem;
 }
 
 p {
   max-width: 60rem;
-  margin: 0 auto;
-  margin-bottom: 2rem; /* Add space below the paragraph */
+  margin: 2rem auto;
+  text-align: justify;
+  font-size: 1.1rem; /* Slightly larger font size for readability */
 }
 
 .photo {
@@ -17,12 +18,15 @@ p {
 }
 
 .product_list {
+  display: grid;
   grid-template-columns: repeat(5, 1fr);
   max-width: 1200px;
-  margin-inline: auto;
+  margin: 2rem auto;
   gap: 1rem;
-  margin: 2rem auto; /* Add margin to the top and bottom, auto for left and right for centering */
-
 }
+
+
+
+
 
 
