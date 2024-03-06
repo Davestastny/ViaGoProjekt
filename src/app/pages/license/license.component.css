@@ -3,6 +3,19 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.ladning-photo h1{
+  font-size: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.ladning-photo img{
+  width: 100%;
+}
+
 p {
   max-width: 60rem;
   margin: 2rem auto;
@@ -10,12 +23,6 @@ p {
   font-size: 1.1rem; /* Slightly larger font size for readability */
 }
 
-.photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem; /* Add space below the image container */
-}
 
 .product_list {
   display: grid;

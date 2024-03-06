@@ -1,6 +1,6 @@
 .navbar {
   grid-template-columns: 1fr auto 1fr;
-  background-color: #393737;
+  background-color: #1D1D1B;
 }
 
 .navbar_logo img {
