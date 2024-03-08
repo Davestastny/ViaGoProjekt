@@ -1,6 +1,6 @@
 h1 {
   text-align: center;
-  margin-bottom: 1rem; /* Add space below the heading */
+  margin-bottom: 1rem;
 }
 
 .landing-photo h1{
@@ -19,8 +19,11 @@ h1 {
 p {
   max-width: 60rem;
   margin: 2rem auto;
-  text-align: justify;
-  font-size: 1.1rem; /* Slightly larger font size for readability */
+  padding: 2rem;
+  background-color: #f5f5f5;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .product_list {
@@ -28,7 +31,7 @@ p {
   max-width: 1200px;
   margin-inline: auto;
   gap: 1rem;
-  margin: 2rem auto; /* Add margin to the top and bottom, auto for left and right for centering */
+  margin: 2rem auto;
 
 }
 

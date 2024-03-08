@@ -12,9 +12,13 @@ h1{
 .landing-page {
   position: relative;
   text-align: center;
+  width: 100%;
+  overflow: hidden;
 }
 .landing-page img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .landing-page h1{
@@ -24,6 +28,7 @@ h1{
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  margin: 0;
 }
 
 .banner {
@@ -34,11 +39,13 @@ h1{
 
 .banner img {
   max-width: 100%;
-  max-height: 100%;
+  height: auto;
 }
 
 .homepage-text {
   text-align: center;
+  padding: 2rem;
+  background-color: #f5f5f5;
 }
 
 .homepage-text h1 {
@@ -50,12 +57,11 @@ h1{
   margin: 0 auto;
 }
 
-/* Přidání horního a spodního marginu pro všechny hlavní sekce */
 .banner,
 .homepage-text,
 .product_list {
-  margin-top: 2rem; /* Horní odsazení */
-  margin-bottom: 2rem; /* Spodní odsazení */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .landing-page {
@@ -64,8 +70,8 @@ h1{
 }
 
 .homepage-text {
-  padding: 2rem; /* Větší odsazení pro textovou sekci */
+  padding: 2rem;
   text-align: center;
-  background-color: #f5f5f5; /* Příklad pozadí pro oddělení sekce */
+  background-color: #f5f5f5;
 }
 
