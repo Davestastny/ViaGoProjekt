@@ -4,6 +4,7 @@ import {ModelsComponent} from "./pages/models/models.component";
 import {NolicenseComponent} from "./pages/nolicense/nolicense.component";
 import {LicenseComponent} from "./pages/license/license.component";
 import {ContactComponent} from "./pages/contact/contact.component";
+import {ProductDetailComponent} from "./pages/product-detail/product-detail.component";
 
 export const routes: Routes = [
   {path: '', component: IndexComponent},
@@ -11,5 +12,6 @@ export const routes: Routes = [
   {path: 'nolicense', component: NolicenseComponent},
   {path: 'license', component: LicenseComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'product-detail', component: ProductDetailComponent}
 
 ];
