@@ -8,7 +8,7 @@ import {ProductCardComponent} from "./components/product-card/product-card.compo
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, NavbarComponent, FooterComponent, ProductCardComponent],
-  templateUrl: './app.component.html',
+    templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {

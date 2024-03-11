@@ -1,15 +1,17 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {Observable, throwError} from 'rxjs';
+import {catchError, tap} from 'rxjs/operators';
 
-import { Product } from '../models/product.model';
+import {Product} from '../models/product.model';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class ProductDataService {
-  private apiUrl = 'https://viago-api.caujasutom.com/';
 
-  constructor(private http: HttpClient) {}
+  private apiUrl = 'https://viago-api.caujasutom.com/api';
+
+  constructor(private http: HttpClient) {
+  }
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl)
@@ -17,8 +19,12 @@ export class ProductDataService {
   }
 
   getProduct(slug: string): Observable<Product> {
-    return this.http.get<Product>(`${this.apiUrl}/${slug}`)
-      .pipe(catchError(this.handleError));
+    console.log('Fetching Product:', slug);
+    return this.http.get<Product>(`${this.apiUrl}/product/${slug}`)
+      .pipe(
+        tap(product => console.log('Fetched Product:', product)),
+        catchError(this.handleError)
+      );
   }
 
   addProduct(product: Product): Observable<Product> {
