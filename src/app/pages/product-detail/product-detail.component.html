@@ -5,7 +5,7 @@
     <div *ngIf="product$ | async as product">
       <div class="price">od {{ product.price }} Kč</div>
       <dl class="details">
-        <dt>{{ product.name }}</dt>
+        <h2>{{ product.name }}</h2>
         <div *ngFor="let parameter of parseParameters(product.parameters) | keyvalue">
           <dt>{{ parameter.key }}:</dt>
           <dd>{{ parameter.value }}</dd>
@@ -14,4 +14,6 @@
     </div>
   </div>
 </div>
-
+<p *ngIf="product$ | async as product">
+  {{ product.description}}
+</p>
