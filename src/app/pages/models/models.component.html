@@ -15,15 +15,7 @@
   Budete tak mít jistotu, že motorka bude doručena v perfektním stavu a plně připravená k provozu. Proto je doba doručení 5-7 pracovních dní od objednání.
 </p>
 <div class="product_list grid">
-  <app-product-card/>
-  <app-product-card/>
-  <app-product-card/>
-  <app-product-card/>
-  <app-product-card/>
-  <app-product-card/>
-  <app-product-card/>
-  <app-product-card/>
-  <app-product-card/>
-  <app-product-card/>
-  <app-product-card/>
+  <div class="product_card" *ngFor="let product of products$ | async">
+    <app-product-card [product]="product"/>
+  </div>
 </div>

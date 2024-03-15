@@ -12,5 +12,8 @@ export const routes: Routes = [
   {path: 'nolicense', component: NolicenseComponent},
   {path: 'license', component: LicenseComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'product-detail/:slug', component: ProductDetailComponent}
+  {path: 'product-detail/:slug', component: ProductDetailComponent},
+  { path: 'product-detail/:slug', component: ProductDetailComponent }
 ];
+
+export class AppRoutingModule { }

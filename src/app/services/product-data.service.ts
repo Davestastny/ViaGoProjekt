@@ -1,20 +1,19 @@
-import {Injectable} from '@angular/core';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import {Observable, throwError} from 'rxjs';
-import {catchError, tap} from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
+import { Product } from '../models/product.model';
 
-import {Product} from '../models/product.model';
 
-@Injectable({providedIn: 'root'})
+
+@Injectable({ providedIn: 'root' })
 export class ProductDataService {
-
   private apiUrl = 'https://viago-api.caujasutom.com/api';
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.apiUrl)
+    return this.http.get<Product[]>(`${this.apiUrl}/products`)
       .pipe(catchError(this.handleError));
   }
 
@@ -33,6 +32,9 @@ export class ProductDataService {
   }
 
   private handleError(error: HttpErrorResponse) {
+    console.error('Something bad happened; please try again later.', error);
     return throwError(() => new Error('Something bad happened; please try again later.'));
   }
 }
+
+// Add the ProductListComponent class below your service as shown above.
