@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import {map, Observable, throwError} from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { Product } from '../models/product.model';
 
@@ -10,7 +10,8 @@ import { Product } from '../models/product.model';
 export class ProductDataService {
   private apiUrl = 'https://viago-api.caujasutom.com/api';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.apiUrl}/products`)
@@ -34,6 +35,12 @@ export class ProductDataService {
   private handleError(error: HttpErrorResponse) {
     console.error('Something bad happened; please try again later.', error);
     return throwError(() => new Error('Something bad happened; please try again later.'));
+  }
+
+  getNoLicenseProducts(): Observable<Product[]> {
+    return this.getProducts().pipe(
+      map(products => products.filter(product => product.slug === 'riga' || product.slug === 'tokio'))
+    );
   }
 }
 
