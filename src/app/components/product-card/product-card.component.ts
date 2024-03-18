@@ -2,6 +2,9 @@ import {Component, Input, OnInit} from '@angular/core';
 import { Product } from '../../models/product.model';
 import { CommonModule } from '@angular/common';
 import {Router} from "@angular/router";
+import { ShoppingCartService } from '../../shopping-cart.service';
+
+
 
 @Component({
   selector: 'app-product-card',
