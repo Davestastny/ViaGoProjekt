@@ -1,14 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingCartService } from '../../shopping-cart.service';
+import { ShoppingCartService } from '../../services/shopping-cart.service';
+import { CartItem } from '../../models/cart-item.model';
+import {CurrencyPipe} from "@angular/common"; // Cesta k souboru modelu CartItem
+
+
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   standalone: true,
+  imports: [
+    CurrencyPipe
+  ],
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cartItems = [];
+  cartItems: CartItem[] = []; // Explicitně určuje typ jako CartItem[]
 
   constructor(private shoppingCartService: ShoppingCartService) {}
 

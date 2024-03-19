@@ -5,7 +5,6 @@ import { catchError, tap } from 'rxjs/operators';
 import { Product } from '../models/product.model';
 
 
-
 @Injectable({ providedIn: 'root' })
 export class ProductDataService {
   private apiUrl = 'https://viago-api.caujasutom.com/api';

@@ -1,17 +1,12 @@
 import { Injectable } from '@angular/core';
-
-interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-}
+import { CartItem } from '../models/cart-item.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ShoppingCartService {
   private cartKey = 'angularShoppingCart';
+
 
   constructor() { }
 
@@ -28,7 +23,8 @@ export class ShoppingCartService {
 
   removeItem(itemId: string): void {
     let cart = this.getItems();
-    cart = cart.filter(item => item.id !== itemId);
+    const itemIdNumber = Number(itemId);
+    cart = cart.filter(item => item.id !== itemIdNumber);
     localStorage.setItem(this.cartKey, JSON.stringify(cart));
   }
 
