@@ -1,7 +1,8 @@
+<h1>Nákupní košík</h1>
 <div *ngIf="cartItems.length; else emptyCart">
   <ul>
     <li *ngFor="let item of cartItems">
-      {{ item.name }} - {{ item.quantity }} x {{ item.price | currency }}
+      {{ item.name }} - {{ item.quantity }} x {{ item.price | currency:'CZK' }}
       <button (click)="removeFromCart(item.id.toString())">Remove</button>
     </li>
   </ul>

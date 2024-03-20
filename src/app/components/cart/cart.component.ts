@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { CartItem } from '../../models/cart-item.model';
-import {CurrencyPipe, NgForOf, NgIf} from "@angular/common"; // Cesta k souboru modelu CartItem
+import {CurrencyPipe, NgForOf, NgIf} from "@angular/common";
 
 
 
@@ -31,11 +31,11 @@ export class CartComponent implements OnInit {
 
   removeFromCart(itemId: string) {
     this.shoppingCartService.removeItem(itemId);
-    this.loadCartItems(); // Refresh the list
+    this.loadCartItems();
   }
 
   clearCart() {
     this.shoppingCartService.clearCart();
-    this.loadCartItems(); // Clear the display
+    this.loadCartItems();
   }
 }

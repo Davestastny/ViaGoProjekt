@@ -21,7 +21,9 @@ export class ProductCardComponent {
     this.router.navigate(['/product-detail', slug]);
   }
 
-  addToCart(): void {
+  addToCart(event: MouseEvent): void {
+    event.stopPropagation(); // Zabráníme šíření události dále
+
     const itemToAdd: CartItem = {
       id: this.product.id,
       name: this.product.name,
@@ -30,6 +32,6 @@ export class ProductCardComponent {
     };
     this.shoppingCartService.addItem(itemToAdd);
     // Přesměrování do košíku je volitelné, závisí na vaší aplikaci
-    this.router.navigate(['/cart']);
+    alert("Produkt byl přidán do košíku.");
   }
 }

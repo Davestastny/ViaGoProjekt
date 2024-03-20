@@ -2,6 +2,6 @@
     <img [src]="product.image" [alt]="product.name">
     <h3>{{ product.name }}</h3>
     <p>{{ product.price }} Kč</p>
-  <a (click)="addToCart()">Do košíku</a> <!-- Změněno z <a> na <button> -->
+  <a (click)="addToCart($event)">Do košíku</a> <!-- Změněno z <a> na <button> -->
   </div>
 
