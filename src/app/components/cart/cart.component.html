@@ -1,13 +1,15 @@
 <h1>Nákupní košík</h1>
-<div *ngIf="cartItems.length; else emptyCart">
-  <ul>
-    <li *ngFor="let item of cartItems">
-      {{ item.name }} - {{ item.quantity }} x {{ item.price | currency:'CZK' }}
-      <button (click)="removeFromCart(item.id.toString())">Remove</button>
+<div *ngIf="cartItems.length; else emptyCart" class="cart-container">
+  <ul class="cart-list">
+    <li *ngFor="let item of cartItems" class="cart-item">
+      <span class="item-name">{{ item.name }}</span> -
+      <span class="item-quantity">{{ item.quantity }}x</span>
+      <span class="item-price">{{ item.price | currency:'CZK' }}</span>
+      <button (click)="removeFromCart(item.id.toString())" class="remove-btn">Remove</button>
     </li>
   </ul>
-  <button (click)="clearCart()">Clear Cart</button>
+  <button (click)="clearCart()" class="clear-cart-btn">Clear Cart</button>
 </div>
 <ng-template #emptyCart>
-  <p>Your cart is empty.</p>
+  <p class="empty-cart">Your cart is empty.</p>
 </ng-template>

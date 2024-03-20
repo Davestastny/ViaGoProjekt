@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from "@angular/router";
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { CartItem } from '../../models/cart-item.model'; // Předpokládá, že CartItem je ve správné cestě
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 @Component({
   selector: 'app-product-card',
@@ -28,10 +29,9 @@ export class ProductCardComponent {
       id: this.product.id,
       name: this.product.name,
       price: this.product.price,
-      quantity: 1 // Předpokládá se, že přidáváte jednu položku; upravte dle potřeby
+      quantity: 1
     };
     this.shoppingCartService.addItem(itemToAdd);
-    // Přesměrování do košíku je volitelné, závisí na vaší aplikaci
-    alert("Produkt byl přidán do košíku.");
+    Notify.success('Produkt byl přidán do košíku.');
   }
 }
