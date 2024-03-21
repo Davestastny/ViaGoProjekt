@@ -35,12 +35,4 @@ export class ProductDataService {
     console.error('Something bad happened; please try again later.', error);
     return throwError(() => new Error('Something bad happened; please try again later.'));
   }
-
-  getNoLicenseProducts(): Observable<Product[]> {
-    return this.getProducts().pipe(
-      map(products => products.filter(product => product.slug === 'riga' || product.slug === 'tokio'))
-    );
-  }
 }
-
-// Add the ProductListComponent class below your service as shown above.

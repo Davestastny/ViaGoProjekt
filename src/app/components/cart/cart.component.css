@@ -15,7 +15,7 @@ h1 {
 .cart-list {
   list-style-type: none;
   padding: 0;
-  width: 50%;
+  width: 50%; /* Tuto šířku upravíme v media queries pro menší obrazovky */
 }
 
 .cart-item {
@@ -32,7 +32,6 @@ h1 {
 .item-name {
   font-weight: bold;
 }
-
 
 .item-quantity,
 .item-price {
@@ -70,4 +69,53 @@ h1 {
   text-align: center;
   font-style: italic;
   margin-top: 20px;
+}
+
+/* Responzivní styly */
+@media (max-width: 768px) {
+  .cart-list {
+    width: 100%; /* Use full width to avoid horizontal scrolling */
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px; /* Reduced padding */
+  }
+
+  .item-name, .item-quantity, .item-price {
+    margin-bottom: 5px; /* Add space between stacked items */
+  }
+
+  .remove-btn, .clear-cart-btn {
+    width: auto;
+    padding: 8px 10px; /* Adjust padding to make buttons smaller */
+    margin-top: 10px;
+  }
+
+  .clear-cart-btn {
+    padding: 10px 20px; /* Slightly larger than remove-btn for emphasis */
+  }
+}
+
+@media (max-width: 480px) {
+  /* ... */
+
+  .cart-item {
+    margin: 10px 0; /* Adjust margins for tighter layout */
+  }
+
+  .item-name, .item-quantity, .item-price {
+    font-size: 0.9em; /* Slightly smaller text to fit more content */
+  }
+}
+
+/* For very small screens like iPhone SE */
+@media (max-width: 375px) {
+  /* ... Additional adjustments if needed ... */
+}
+
+/* Consider also for landscape orientation */
+@media (max-width: 568px) and (orientation: landscape) {
+  /* ... Adjustments for landscape orientation ... */
 }

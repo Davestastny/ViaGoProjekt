@@ -67,3 +67,41 @@ p {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transform: translateY(-5px);
 }
+
+@media (max-width: 1200px) {
+  .product_list {
+    grid-template-columns: repeat(4, 1fr); /* 4 produkty na řádek pro středně velké obrazovky */
+  }
+}
+
+@media (max-width: 992px) {
+  .product_list {
+    grid-template-columns: repeat(3, 1fr); /* 3 produkty na řádek pro malé obrazovky */
+  }
+}
+
+@media (max-width: 768px) {
+  .product_list {
+    grid-template-columns: repeat(2, 1fr); /* 2 produkty na řádek pro tablety */
+  }
+
+  .hero-img,
+  .landing-photo img {
+    height: 50vh; /* Upravte výšku obrázku pro menší obrazovky */
+  }
+}
+
+@media (max-width: 576px) {
+  .product_list {
+    grid-template-columns: 1fr; /* 1 produkt na řádek pro mobily */
+  }
+
+  .hero-img {
+    display: none; /* Skrytí obrázku na mobilních zařízeních */
+  }
+
+  .landing-photo h1,
+  p {
+    font-size: 20px; /* Přizpůsobení velikosti textu pro mobilní zařízení */
+  }
+}

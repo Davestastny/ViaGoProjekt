@@ -11,6 +11,11 @@ footer .footer_content {
   margin-inline: auto;
   grid-template-columns: repeat(3, 1fr);
 }
+@media (max-width: 700px)  {
+  footer .footer_content {
+  grid-template-columns: 1fr;
+  }
+}
 
 .footer_content .footer_content-info {
   justify-content: end;
