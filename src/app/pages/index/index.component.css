@@ -118,7 +118,7 @@ h1 {
 
   .landing-page h1,
   .homepage-text p {
-    font-size: 24px; /* Nejmenší fonty pro velmi malé obrazovky */
+    font-size: 20px; /* Nejmenší fonty pro velmi malé obrazovky */
   }
 
   /* Skrytí obrázků na mobilních zařízeních */

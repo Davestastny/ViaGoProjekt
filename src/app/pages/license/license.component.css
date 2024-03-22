@@ -85,7 +85,7 @@ p {
   }
 
   p {
-    font-size: 16px; /* Přizpůsobení velikosti textu pro mobilní zařízení */
+    font-size: 20px; /* Přizpůsobení velikosti textu pro mobilní zařízení */
     padding: 1rem; /* Menší padding pro mobilní zařízení */
   }
 }

@@ -40,3 +40,82 @@
   color: #FFD700;
 }
 
+.navbar_hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: auto 1fr;
+    padding: 16px;
+  }
+
+  .navbar_logo,
+  .navbar_shopping_cart {
+    justify-self: start;
+    padding-right: 0;
+  }
+
+  .navbar_links {
+    display: none;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .navbar {
+    grid-template-columns: auto 1fr;
+    padding: 8px;
+  }
+
+  .navbar_logo img {
+    height: 40px;
+  }
+
+  .navbar_shopping_cart {
+    padding-right: 8px;
+  }
+
+  .navbar_shopping_cart img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar_logo,
+  .navbar_shopping_cart {
+    justify-self: start;
+    padding-right: 0;
+  }
+
+  .navbar_links {
+    display: none;
+  }
+
+  .navbar_hamburger {
+    display: block;
+    justify-self: end;
+  }
+
+  .navbar_links {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    flex-direction: column;
+    background-color: #1D1D1B;
+    width: 100%;
+    transform: translateY(-100vh);
+    transition: transform 0.3s ease;
+    gap: 0;
+  }
+
+  .navbar_links a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Show links when active */
+  .navbar_links.active {
+    transform: translateY(0);
+  }
+}

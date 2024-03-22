@@ -84,12 +84,13 @@ p {
     display: none; /* Skrytí obrázku na mobilních zařízeních */
   }
 
-  .landing-photo h1,
+  .landing-photo
   p {
     font-size: 20px; /* Přizpůsobení velikosti textu pro mobilní zařízení */
   }
 
   .landing-photo h1 {
+    display: none;
     font-size: 24px; /* Menší font pro mobilní zařízení */
     transform: translate(-50%, -50%);
   }
