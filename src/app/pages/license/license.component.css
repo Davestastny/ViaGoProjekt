@@ -3,6 +3,13 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.landing-photo {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
 .landing-photo h1{
   font-size: 64px;
   position: absolute;
@@ -58,35 +65,35 @@ p {
 
 @media (max-width: 1200px) {
   .product_list {
-    grid-template-columns: repeat(4, 1fr); /* 4 produkty na řádek pro středně velké obrazovky */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 992px) {
   .product_list {
-    grid-template-columns: repeat(3, 1fr); /* 3 produkty na řádek pro malé obrazovky */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .product_list {
-    grid-template-columns: repeat(2, 1fr); /* 2 produkty na řádek pro tablety */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 576px) {
   .product_list {
-    grid-template-columns: 1fr; /* 1 produkt na řádek pro mobily */
+    grid-template-columns: 1fr;
   }
 
   .landing-photo img,
   .landing-photo h1 {
-    display: none; /* Skrytí obrázku a nadpisu na mobilních zařízeních */
+    display: none;
   }
 
   p {
-    font-size: 20px; /* Přizpůsobení velikosti textu pro mobilní zařízení */
-    padding: 1rem; /* Menší padding pro mobilní zařízení */
+    font-size: 20px;
+    padding: 1rem;
   }
 }
 

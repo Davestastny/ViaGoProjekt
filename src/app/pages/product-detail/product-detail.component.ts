@@ -6,6 +6,8 @@ import {Observable, of, switchMap} from "rxjs";
 import {catchError} from "rxjs/operators";
 import {AsyncPipe, KeyValuePipe, NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
 import {Router} from '@angular/router';
+import { ShoppingCartService } from '../../services/shopping-cart.service';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 @Component({
   selector: 'app-product-detail',
@@ -27,7 +29,8 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductDataService
+    private productService: ProductDataService,
+    private shoppingCartService: ShoppingCartService
   ) {
   }
 
@@ -47,6 +50,21 @@ export class ProductDetailComponent implements OnInit {
 
   parseParameters(parametersString: string): { [key: string]: any } {
     return JSON.parse(parametersString);
+  }
+
+  addToCart($event: MouseEvent): void {
+    this.product$.subscribe(product => {
+      if (product) {
+        const itemToAdd = {
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          quantity: 1
+        };
+        this.shoppingCartService.addItem(itemToAdd);
+        Notify.success('Produkt byl přidán do košíku.');
+      }
+    });
   }
 }
 

@@ -5,11 +5,11 @@
       <span class="item-name">{{ item.name }}</span> -
       <span class="item-quantity">{{ item.quantity }}x</span>
       <span class="item-price">{{ item.price | currency:'CZK' }}</span>
-      <button (click)="removeFromCart(item.id.toString())" class="remove-btn">Remove</button>
+      <button (click)="removeFromCart(item.id.toString())" class="remove-btn">Odstranit</button>
     </li>
   </ul>
-  <button (click)="clearCart()" class="clear-cart-btn">Clear Cart</button>
+  <button (click)="clearCart()" class="clear-cart-btn">Vyprázdnit košík</button>
 </div>
 <ng-template #emptyCart>
-  <p class="empty-cart">Your cart is empty.</p>
+  <p class="empty-cart">Váš košík je prázdný.</p>
 </ng-template>

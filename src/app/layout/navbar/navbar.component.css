@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 766px) {
   .navbar {
     grid-template-columns: auto 1fr;
     padding: 16px;
@@ -114,7 +114,6 @@
     text-align: center;
   }
 
-  /* Show links when active */
   .navbar_links.active {
     transform: translateY(0);
   }

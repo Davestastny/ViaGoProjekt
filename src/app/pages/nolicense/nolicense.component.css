@@ -1,6 +1,12 @@
 h1 {
   text-align: center;
-  margin-bottom: 1rem;
+}
+
+.landing-photo {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .landing-photo h1{
@@ -15,7 +21,7 @@ h1 {
 
 .landing-photo img{
   width: 100%;
-  height: 100vh;
+  height: auto;
   object-fit: cover;
 }
 
@@ -59,39 +65,44 @@ p {
 
 @media (max-width: 1200px) {
   .product_list {
-    grid-template-columns: repeat(4, 1fr); /* 4 produkty na řádek pro středně velké obrazovky */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 992px) {
   .product_list {
-    grid-template-columns: repeat(3, 1fr); /* 3 produkty na řádek pro malé obrazovky */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .product_list {
-    grid-template-columns: repeat(2, 1fr); /* 2 produkty na řádek pro tablety */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .homepage-text p,
+  .landing-page h1 {
+    font-size: 36px;
   }
 }
 
 @media (max-width: 576px) {
   .product_list {
-    grid-template-columns: 1fr; /* 1 produkt na řádek pro mobily */
+    grid-template-columns: 1fr;
   }
 
   .landing-photo img {
-    display: none; /* Skrytí obrázku na mobilních zařízeních */
+    display: none;
   }
 
   .landing-photo
   p {
-    font-size: 20px; /* Přizpůsobení velikosti textu pro mobilní zařízení */
+    font-size: 20px;
   }
 
   .landing-photo h1 {
     display: none;
-    font-size: 24px; /* Menší font pro mobilní zařízení */
+    font-size: 24px;
     transform: translate(-50%, -50%);
   }
 }
