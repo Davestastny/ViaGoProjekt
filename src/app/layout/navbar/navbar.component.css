@@ -45,27 +45,16 @@
   cursor: pointer;
 }
 
-@media (max-width: 766px) {
-  .navbar {
-    grid-template-columns: auto 1fr;
-    padding: 16px;
-  }
-
-  .navbar_logo,
-  .navbar_shopping_cart {
-    justify-self: start;
-    padding-right: 0;
-  }
-
-  .navbar_links {
-    display: none;
-  }
+.navbar_hamburger img {
+  width: 30px; /* Adjust as needed */
+  height: auto;
+  display: block; /* Ensures that the SVG is treated as a block-level element */
 }
 
-
+/* Updated media query for max-width: 576px */
 @media (max-width: 576px) {
   .navbar {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto; /* Add space for the hamburger menu */
     padding: 8px;
   }
 
@@ -85,36 +74,38 @@
   .navbar_logo,
   .navbar_shopping_cart {
     justify-self: start;
-    padding-right: 0;
-  }
-
-  .navbar_links {
-    display: none;
   }
 
   .navbar_hamburger {
     display: block;
     justify-self: end;
+    padding-right: 8px; /* Ensure padding for the hamburger icon */
   }
 
   .navbar_links {
-    position: absolute;
-    right: 0;
-    top: 60px;
-    flex-direction: column;
+    display: block; /* Changed from none to block */
+    position: fixed;
     background-color: #1D1D1B;
     width: 100%;
-    transform: translateY(-100vh);
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%); /* Changed from translateY to translateX */
     transition: transform 0.3s ease;
+    padding-top: 60px; /* Adjust as needed */
+    z-index: 10; /* Ensure it's above other content */
     gap: 0;
+    flex-direction: column;
+  }
+
+  .navbar_links.active {
+    transform: translateX(0); /* Slide in from the left */
   }
 
   .navbar_links a {
     padding: 10px;
-    text-align: center;
-  }
-
-  .navbar_links.active {
-    transform: translateY(0);
+    text-align: left; /* Align to the left for better mobile UX */
+    width: 100%; /* Full width for each link */
+    display: block; /* Each link is a block to allow full-width tap area */
   }
 }
